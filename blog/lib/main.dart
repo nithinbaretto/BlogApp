@@ -1,5 +1,6 @@
 import 'package:blog/views/mainPage.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,11 +14,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        fontFamily: GoogleFonts.ubuntu().fontFamily,
         primarySwatch: Colors.blue,
       ),
       home: MainPage(),
     );
   }
 }
-
-
