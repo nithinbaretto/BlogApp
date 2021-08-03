@@ -6,6 +6,8 @@ import 'package:blog/views/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'Dashboard.dart';
+
 class SigninPage extends StatefulWidget {
   SigninPage({Key? key}) : super(key: key);
 
@@ -148,11 +150,8 @@ class _SigninPageState extends State<SigninPage> {
                                             storage.write(
                                                 key: "token",
                                                 value: response['token']);
-                                            print(response['token']);
-                                          }
-
-                                          // Get.to(HomePage());
-                                          else {
+                                            Get.to(Dashboard());
+                                          } else {
                                             ScaffoldMessenger.of(context)
                                                 .showSnackBar(SnackBar(
                                               duration: Duration(seconds: 2),
